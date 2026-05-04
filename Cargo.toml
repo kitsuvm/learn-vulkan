@@ -1,11 +1,11 @@
-[package]
-name = "learn-vulkan"
-version = "0.1.0"
-edition = "2024"
-build = "build.rs"
+[workspace]
+resolver = "3"
+members = ["kitty-window", "kitty-vulkan-sys", "kitty-vulkan"]
 
-[target.'cfg(windows)'.dependencies]
-windows = { version = "0.62.2", features = [ "Win32_System_LibraryLoader", "Win32_UI_WindowsAndMessaging", "Win32_Graphics_Gdi"] }
-
-[build-dependencies]
+[workspace.dependencies]
+kitty-window = { path = "kitty-window", version = "0.1.0" }
+kitty-vulkan = { path = "kitty-vulkan", version = "0.1.0" }
+kitty-vulkan-sys = { path = "kitty-vulkan-sys", version = "0.1.0" }
 bindgen = "0.72.1"
+derive_more = "2.1.1"
+windows = "0.62.2"

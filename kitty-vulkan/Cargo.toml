@@ -1,0 +1,7 @@
+[package]
+name = "kitty-vulkan"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+kitty-vulkan-sys = { workspace = true }
