@@ -1,10 +1,21 @@
 [package]
 name = "kitty-vulkan-sys"
 version = "0.1.0"
-edition = "2024"
+description = "Low-level Vulkan bindings for Rust."
+categories = ["external-ffi-bindings", "rendering::graphics-api"]
+keywords = ["vulkan", "ffi", "bindings", "graphics"]
+readme = "README.md"
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
 
 [build-dependencies]
-bindgen = { workspace = true }
+bindgen.workspace = true
 
-[dependencies]
-derive_more = { workspace = true }
+[target.'cfg(windows)'.build-dependencies]
+semver.workspace = true
+
+[target.'cfg(windows)'.build-dependencies.windows]
+features = ["Win32_UI_Shell", "Win32_UI_Shell", "Win32_System_Com"]
+workspace = true
