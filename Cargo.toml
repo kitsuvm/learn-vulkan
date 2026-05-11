@@ -2,10 +2,19 @@
 resolver = "3"
 members = ["kitty-window", "kitty-vulkan-sys", "kitty-vulkan"]
 
+[workspace.package]
+license = "MIT"
+edition = "2024"
+rust-version = "1.95.0"
+authors = ["Kitsu/VM <nashiradeer@gmail.com>"]
+repository = "https://github.com/kitsuvm/learn-vulkan"
+
 [workspace.dependencies]
 kitty-window = { path = "kitty-window", version = "0.1.0" }
 kitty-vulkan = { path = "kitty-vulkan", version = "0.1.0" }
 kitty-vulkan-sys = { path = "kitty-vulkan-sys", version = "0.1.0" }
 bindgen = "0.72.1"
+bitflags = "2.11.1"
 derive_more = "2.1.1"
 windows = "0.62.2"
+semver = "1.0.28"

@@ -1,7 +1,21 @@
 [package]
 name = "kitty-vulkan"
 version = "0.1.0"
-edition = "2024"
+description = "High-level Vulkan wrapper for Rust."
+categories = ["api-bindings", "rendering::graphics-api"]
+keywords = ["vulkan", "graphics", "wrapper", "rust"]
+readme = "README.md"
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
 
 [dependencies]
-kitty-vulkan-sys = { workspace = true }
+bitflags.workspace = true
+kitty-vulkan-sys.workspace = true
+derive_more = { features = [
+    "display",
+    "from",
+    "into",
+    "error",
+], workspace = true }
